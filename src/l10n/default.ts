@@ -59,7 +59,7 @@ export const english: Locale = {
         return "th";
     }
   },
-  rangeSeparator: " to ",
+  rangeSeparator: "/",
   weekAbbreviation: "Wk",
   scrollTitle: "Scroll to increment",
   toggleTitle: "Click to toggle",
