@@ -889,6 +889,13 @@
                     }));
                 }
             }
+            /* [START] jrom for rocket */
+            if (self.bContainer !== undefined) {
+                bind(self.bContainer, "mousedown", onClick(function (e) {
+                    clear(true);
+                }));
+            }
+            /* [END] jrom for rocket */
         }
         /**
          * Set the calendar view to a particular date.
@@ -974,6 +981,11 @@
                 }
                 buildDays();
                 self.rContainer.appendChild(self.daysContainer);
+                /* [START] [2020-02-28] - jrom for rocket */
+                self.bContainer = createElement("div", "flatpickr-bContainer");
+                self.bContainer.innerHTML = ('<i class="fas fa-ban"></i>');
+                self.rContainer.appendChild(self.bContainer);
+                /* [END] */
                 self.innerContainer.appendChild(self.rContainer);
                 fragment.appendChild(self.innerContainer);
             }

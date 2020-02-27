@@ -448,6 +448,14 @@ function FlatpickrInstance(
       bind(self.daysContainer, "mousedown", onClick(selectDate));
     }
 
+    /* [START] jrom for rocket */
+    if (self.bContainer !== undefined) {
+      bind(self.bContainer, "mousedown", onClick( () => {
+          clear(true);
+      }));
+    }
+    /* [END] jrom for rocket */
+
     if (
       self.timeContainer !== undefined &&
       self.minuteElement !== undefined &&
@@ -598,6 +606,19 @@ function FlatpickrInstance(
       buildDays();
 
       self.rContainer.appendChild(self.daysContainer);
+
+      /* [START] [2020-02-28] - jrom for rocket */
+      if (!self.bContainer) {
+        self.bContainer = createElement<HTMLDivElement>(
+          "div",
+          "flatpickr-bContainer"
+        );
+      }
+      self.bContainer.innerHTML = ('<i class="fas fa-ban"></i>');
+      self.rContainer.appendChild(self.bContainer);
+
+      /* [END] */
+
       self.innerContainer.appendChild(self.rContainer);
       fragment.appendChild(self.innerContainer);
     }
@@ -1400,6 +1421,7 @@ function FlatpickrInstance(
       "_positionElement",
       "innerContainer",
       "rContainer",
+      "bContainer",
       "monthNav",
       "todayDateElem",
       "calendarContainer",

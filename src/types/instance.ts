@@ -19,6 +19,7 @@ export interface Elements {
   calendarContainer: HTMLDivElement;
   innerContainer?: HTMLDivElement;
   rContainer?: HTMLDivElement;
+  bContainer?: HTMLDivElement;
   daysContainer?: HTMLDivElement;
   days: HTMLDivElement;
 

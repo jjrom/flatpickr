@@ -758,6 +758,29 @@ span.flatpickr-weekday {
 .flatpickr-input[readonly] {
   cursor: pointer;
 }
+/* [START] rocket */
+.flatpickr-bContainer {
+  border-radius: 5px 5px 0 0;
+  background: #eceef1;
+  color: #5a6171;
+  fill: #5a6171;
+  height: 34px;
+  line-height: 34px;
+  font-size: 1.2em;
+  text-align: center;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+/* [END] rocket */
+
 @-webkit-keyframes fpFadeInDown {
   from {
     opacity: 0;
